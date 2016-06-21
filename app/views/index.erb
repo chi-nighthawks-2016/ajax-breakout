@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" id="playlistsContainer">
+      <h2>Playlists</h2>
+      <table class="table table-striped">
+        <caption>Click on a row to view songs</caption>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @playlists.each do |playlist| %>
+          <tr data-playlist-id="<%= playlist.id   %>">
+            <td><%= playlist.title %></td>
+            <td><%= playlist.description %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-4" id="songsContainer">
+      <h2>Songs</h2>
+      <table class="table table-striped">
+        <caption>Click garbage icon to remove</caption>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Artist</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+   </div>
+    <div class="col-md-4" id="addSongContainer">
+      <h2>Add Song</h2>
+      <p>Adds song to currently selected playlist</p>
+      <form action="" method="POST">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Title</label>
+          <input type="text" class="form-control" id="title">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Artist</label>
+          <input type="text" class="form-control" id="email">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+  </div>
+
+</div>

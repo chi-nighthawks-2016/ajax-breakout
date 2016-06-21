@@ -1,0 +1,19 @@
+body {
+  padding-top: 65px;
+}
+
+#addSongContainer form {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+}
+
+#addSongContainer, #songsContainer {
+  display:none;
+}
+
+#addSongContainer p {
+  color: #bbbbbb;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
